@@ -1,0 +1,49 @@
+.container {
+  width: 200px;   /* 70px 95px */
+  height: 260px;
+  margin: 20px 10px;
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  box-shadow: 0 3px 18px 3px rgba(30, 130, 250, 0.8);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  position: absolute;
+  user-select: none;
+}
+
+.front {
+  background: rgb(230, 230, 230);
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.back {
+  outline: 3px solid rgb(230, 230, 230);
+  outline-offset: -3px;
+  transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.art {
+  z-index: -1;
+  -webkit-user-drag: none;
+}

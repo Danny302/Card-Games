@@ -21,13 +21,13 @@ export function PlayingCard({ card }: PlayingCardProps) {
   return (
     <div className={styles.container}>
       <div className={clsx(styles.card, status && styles.flip)} onClick={flip}>
-        <CardUI className={clsx(styles.content, styles.front)}>
+        <CardUI radius='sm' className={clsx(styles.content, styles.front)} style={{color: card.color}}>
             {card.rank}<br/>{card.suit}
         </CardUI>
-        <CardUI className={clsx(styles.content, styles.back)}>
+        <CardUI radius='sm' className={clsx(styles.content, styles.back)}>
           <Image
             className={styles.art}
-            src="/card_art.jpeg"
+            src='/card_art.jpeg'
           />
         </CardUI>
       </div>
