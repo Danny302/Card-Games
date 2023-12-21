@@ -1,9 +1,9 @@
 'use client'
 
 import { PlayingCard } from './../components/PlayingCard'
-import Card from './../lib/card'
+import Card, { Rank, Suit, Status } from './../lib/card'
 
-const card = new Card(Card.Rank.Ace, Card.Suit.Hearts, Card.Status.FaceDown)
+const card = new Card(Rank.Ace, Suit.Hearts, Status.FaceDown)
 
 export default function Home() {
   return (

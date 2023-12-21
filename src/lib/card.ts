@@ -1,5 +1,5 @@
 // Do not rearrange Rank order
-enum Rank {
+export enum Rank {
   Joker = "JOKER",
   Ace =   "A",
   Two =   "2",
@@ -16,14 +16,14 @@ enum Rank {
   King =  "K"
 }
 // Do not rearrange Suit order
-enum Suit {
+export enum Suit {
   Joker =    "★",
   Clubs =    "♣",
   Diamonds = "♦",
   Hearts =   "♥",
   Spades =   "♠"
 }
-enum Status {
+export enum Status {
   FaceDown,
   FaceUp
 }
@@ -39,10 +39,6 @@ interface ICard {
 }
 
 export default class Card implements ICard {
-  // makes enums available via Card.Rank, Card.Suit, Card.Status
-  static readonly Rank = Rank;
-  static readonly Suit = Suit;
-  static readonly Status = Status;
   // private class properties
   readonly #rank: Rank;
   readonly #value: number;
@@ -67,7 +63,7 @@ export default class Card implements ICard {
     [Rank.King,  13]
   ]);
   readonly #suitColors = new Map<Suit, string>([
-    [Suit.Joker,  ""],
+    [Suit.Joker,   "gold"],
     [Suit.Clubs,  "black"],
     [Suit.Diamonds, "red"],
     [Suit.Hearts,   "red"],
