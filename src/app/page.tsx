@@ -1,14 +1,22 @@
 'use client'
 
+import { useState, useEffect, ReactNode } from 'react'
 import { PlayingCard } from './../components/PlayingCard'
-import Card, { Rank, Suit, Status } from './../lib/card'
-
-const card = new Card(Rank.Ace, Suit.Hearts, Status.FaceDown)
+import Deck from './../lib/deck'
 
 export default function Home() {
+  const deck = new Deck(10, true)
+  const [cards, setCards] = useState<ReactNode>()
+
+  useEffect(() => {
+    setCards(deck.deck.map((card, index) =>
+      <PlayingCard key={card.rank + card.suit + index} card={card} />
+    ))
+  }, [])
+
   return (
-    <main className="flex flex-col items-center justify-between p-24">
-      <PlayingCard card={card} />
+    <main className="flex flex-row flex-wrap items-center justify-between">
+      {cards}
     </main>
   )
 }
