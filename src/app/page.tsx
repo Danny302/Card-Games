@@ -15,7 +15,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex flex-row flex-wrap items-center justify-between">
+    <main className='flex flex-row flex-wrap items-center justify-between'>
       {cards}
     </main>
   )

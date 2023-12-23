@@ -1,27 +1,27 @@
 // Do not rearrange Rank order
 export enum Rank {
-  Joker = "JOKER",
-  Ace =   "A",
-  Two =   "2",
-  Three = "3",
-  Four =  "4",
-  Five =  "5",
-  Six =   "6",
-  Seven = "7",
-  Eight = "8",
-  Nine =  "9",
-  Ten =  "10",
-  Jack =  "J",
-  Queen = "Q",
-  King =  "K"
+  Joker = 'JOKER',
+  Ace =   'A',
+  Two =   '2',
+  Three = '3',
+  Four =  '4',
+  Five =  '5',
+  Six =   '6',
+  Seven = '7',
+  Eight = '8',
+  Nine =  '9',
+  Ten =  '10',
+  Jack =  'J',
+  Queen = 'Q',
+  King =  'K'
 }
 // Do not rearrange Suit order
 export enum Suit {
-  Joker =    "★",
-  Clubs =    "♣",
-  Diamonds = "♦",
-  Hearts =   "♥",
-  Spades =   "♠"
+  Joker =    '★',
+  Clubs =    '♣',
+  Diamonds = '♦',
+  Hearts =   '♥',
+  Spades =   '♠'
 }
 export enum Status {
   FaceDown,
@@ -63,11 +63,11 @@ export default class Card implements ICard {
     [Rank.King,  13]
   ]);
   readonly #suitColors = new Map<Suit, string>([
-    [Suit.Joker,   "gold"],
-    [Suit.Clubs,  "black"],
-    [Suit.Diamonds, "red"],
-    [Suit.Hearts,   "red"],
-    [Suit.Spades, "black"]
+    [Suit.Joker,   'gold'],
+    [Suit.Clubs,  'black'],
+    [Suit.Diamonds, 'red'],
+    [Suit.Hearts,   'red'],
+    [Suit.Spades, 'black']
   ]);
 
   constructor(rank: Rank, suit: Suit, status: Status) {
