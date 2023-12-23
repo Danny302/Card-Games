@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import type Card from './../lib/card'
 
 interface PlayingCardProps {
-  card: Card;
+  card: Card
 }
 
 export function PlayingCard({ card }: PlayingCardProps) {
