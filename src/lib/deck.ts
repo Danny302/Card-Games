@@ -74,8 +74,7 @@ export default class Deck {
       if (rank <= 12) {
         this.#deck.push( new Card(ranks[rank], Suit.Clubs, Status.FaceDown) );
         this.#deck.push( new Card(ranks[rank], Suit.Spades, Status.FaceDown) );
-      }
-      else {
+      } else {
         this.#deck.push( new Card(ranks[rank-13], Suit.Diamonds, Status.FaceDown) );
         this.#deck.push( new Card(ranks[rank-13], Suit.Hearts, Status.FaceDown) );
       }
