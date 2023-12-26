@@ -33,7 +33,7 @@ export default class Deck {
         this.#deck.push( new Card(Rank.Joker, Suit.Joker, Status.FaceDown) );
       }
 
-      if (this.#deck.length == this.#size) {
+      if (this.#deck.length === this.#size) {
         break;
       }
 

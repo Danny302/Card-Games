@@ -95,11 +95,11 @@ export default class Card implements ICard {
   }
 
   isFaceDown() {
-    return this.#status == Status.FaceDown;
+    return this.#status === Status.FaceDown;
   }
 
   isFaceUp() {
-    return this.#status == Status.FaceUp;
+    return this.#status === Status.FaceUp;
   }
 
   flip(): void {
