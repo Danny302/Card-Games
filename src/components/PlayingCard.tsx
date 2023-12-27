@@ -7,13 +7,18 @@ import type Card from './../lib/card'
 
 interface PlayingCardProps {
   card: Card
+  onClick?: Function
 }
 
-export function PlayingCard({ card }: PlayingCardProps) {
+export function PlayingCard({ card, onClick }: PlayingCardProps) {
   const [status, setStatus] = useState(card.isFaceDown())
   const flip = () => {
-    card.flip()
-    setStatus(card.isFaceDown())
+    if (onClick) {
+      onClick(card, setStatus)
+    } else {
+      card.flip()
+      setStatus(card.isFaceDown())
+    }
   }
 
   return (
