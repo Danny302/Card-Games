@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Card as CardUI } from '@nextui-org/card'
 import { Image } from '@nextui-org/image'
-import styles from './PlayingCard.module.css'
+import styles from '../styles/PlayingCard.module.css'
 import clsx from 'clsx'
 import type Card from './../lib/card'
 
