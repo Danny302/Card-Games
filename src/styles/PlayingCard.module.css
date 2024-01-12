@@ -2,7 +2,7 @@
   aspect-ratio: 5 / 7;
   min-width: 75px;
   max-width: 150px;
-  flex-basis: calc(100% / 12); /*figure out the numbers*/
+  flex-basis: calc(100% / 4); /*figure out the numbers*/
   perspective: 1000px;
 }
 
@@ -28,20 +28,25 @@
 }
 
 .front {
-  background: rgb(230, 230, 230);
-  text-align: center;
-  font-weight: bold;
+  background: var(--white);
   font-size: 40px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .back {
-  outline: 3px solid rgb(230, 230, 230);
+  outline: 3px solid var(--white);
   outline-offset: -3px;
   transform: rotateY(180deg);
 }
 
 .flip {
   transform: rotateY(180deg);
+}
+
+.info {
+  width: 100%;
+  height: 100%;
 }
 
 .art {

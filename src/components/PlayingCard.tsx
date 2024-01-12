@@ -24,8 +24,12 @@ export function PlayingCard({ card, onClick }: PlayingCardProps) {
   return (
     <div className={styles.container}>
       <div className={clsx(styles.card, status && styles.flip)} onClick={flip}>
-        <CardUI radius='sm' className={clsx(styles.content, styles.front)} style={{color: card.color}}>
-          {card.rank}<br/>{card.suit}
+        <CardUI radius='sm' className={clsx(styles.content, styles.front)}>
+          <svg viewBox='0 0 150 120'>
+            <foreignObject className={styles.info} style={{color: card.color}}>
+              {card.rank}<br/>{card.suit}
+            </foreignObject>
+          </svg>
         </CardUI>
         <CardUI radius='sm' className={clsx(styles.content, styles.back)}>
           <Image
