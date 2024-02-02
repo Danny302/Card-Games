@@ -1,0 +1,23 @@
+.title {
+  color: black;
+  font-family: arial black, sans-serif;
+  font-size: 30px;
+  padding: 10px;
+  text-shadow: 0 0 5px var(--white), 0 0 10px var(--sky-blue), 0 0 15px var(--sky-blue), 0 0 20px var(--sky-blue), 0 0 25px var(--pink), 0 0 30px var(--pink), 0 0 35px var(--pink);
+}
+
+.prompt {
+  width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  overflow: auto;
+  padding: 30px 50px;
+  gap: 25px;
+}
