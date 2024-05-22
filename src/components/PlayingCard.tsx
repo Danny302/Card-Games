@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { Card as CardUI } from '@nextui-org/card'
 import { Image } from '@nextui-org/image'
-import styles from '../styles/PlayingCard.module.css'
+import styles from '@/styles/PlayingCard.module.css'
 import clsx from 'clsx'
-import type Card from './../lib/card'
+import type Card from '@/lib/card'
 
 interface PlayingCardProps {
   card: Card
   onClick?: Function
 }
 
-export function PlayingCard({ card, onClick }: PlayingCardProps) {
+const PlayingCard = ({ card, onClick }: PlayingCardProps) => {
   const [status, setStatus] = useState(card.isFaceDown())
   const flip = () => {
     if (onClick) {
@@ -41,3 +41,5 @@ export function PlayingCard({ card, onClick }: PlayingCardProps) {
     </div>
   )
 }
+
+export default PlayingCard

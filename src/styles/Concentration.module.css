@@ -21,3 +21,17 @@
   padding: 30px 50px;
   gap: 25px;
 }
+
+.option {
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+.helper-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.error {
+  color: var(--pink)
+}

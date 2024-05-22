@@ -4,8 +4,8 @@ import Player from './player';
 import Timeout from './timeout';
 
 export enum Rule {
-  RankAndColor,
-  RankOnly
+  RankAndColor = 'Rank and Color',
+  RankOnly = 'Rank Only'
 }
 
 export default class Concentration {
